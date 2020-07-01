@@ -1,0 +1,47 @@
+from random import *
+#  ID = id, 상의 = top, 하의  = bottom, 상의_사이즈 = top_size, 하의_사이즈 = bottom_size
+
+
+
+p = ''
+user_table = []
+dd = ''
+for i in range(1,11):
+    ddi = {}
+    for x in range(3,11):
+        sx = randrange(1,7)
+        if sx == 1:
+            idd = 'a'
+        elif sx == 2:
+            idd = 'b'
+        elif sx == 3:
+            idd = 'c'
+        elif sx == 4:
+            idd = 'd'
+        elif sx == 5:
+            idd = 'e'
+        elif sx == 6:
+            idd = 'f'
+        dd += idd
+    
+    for y in range(1,7):
+        sy = randrange(1,5)
+        p += str(sy)
+    x = randrange(150,190)
+    y = randrange(40,100)
+    z = randrange(1,3)
+    if z == 1:
+        c = 'M'
+    else:
+        c = "w"
+    ddi['kg'] = y
+    ddi['height'] = x
+    ddi['gender'] = c
+    ddi['id'] = dd
+    ddi['pw'] = p
+    
+    user_table.append(ddi)
+    dd = ''
+    p = ''
+    
+print(user_table)
